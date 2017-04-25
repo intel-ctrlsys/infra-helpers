@@ -3,7 +3,8 @@ FROM centos:centos7.3.1611
 RUN yum install -y epel-release && \
     yum install -y wget unzip tar git gcc m4 gcc-c++ make flex libtool-ltdl openssl \
                    openssl-devel cmake unixODBC unixODBC-devel xz patch perl-CPAN perl-devel \
-                   rpm-build libtool autoconf automake libesmtp zeromq zeromq-devel libcurl-devel munge-devel \
+                   rpm-build libtool autoconf automake libesmtp zeromq zeromq-devel libcurl-devel \
+                   munge-devel libxml2-devel \
     && wget http://vault.centos.org/6.8/os/Source/SPackages/sigar-1.6.5-0.4.git58097d9.el6.src.rpm && \
        rpmbuild --rebuild ./sigar-1.6.5-0.4.git58097d9.el6.src.rpm && \
        rm -rf sigar-1.6.5* && \
